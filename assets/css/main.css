@@ -62,6 +62,9 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+html{
+  background-color: #eaf5f7;
+}
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -370,7 +373,6 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding: 40px 0;
   position: relative;
   border-top: 1px solid
     color-mix(in srgb, var(--default-color), transparent 90%);
@@ -384,6 +386,113 @@ h6 {
   margin-top: 4px;
   font-size: 13px;
   text-align: center;
+}
+
+.footer {
+    background-color: #040b14; /* Dark background for strong contrast */
+    color: #f8f9fa; /* Light text color */
+    font-size: 15px;
+}
+
+
+
+/* Footer Headings (Quick Links, Contact, etc.) */
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff; /* White text for contrast */
+    position: relative;
+
+}
+
+/* About/Logo Section */
+.about-social-contact-wrapper{
+  margin: auto auto;
+}
+
+.footer-about .sitename {
+    font-size: 24px;
+    font-weight: 700;
+    color: #199eeb; /* Use your signature purple/violet color */
+}
+
+.footer-about .mission-statement {
+    color: #adb5bd;
+    margin-top: 15px;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+/* Quick Links and Services Lists */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    padding: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.footer-links ul li a:hover {
+    color: #068ad6; /* Highlight links on hover */
+}
+
+/* Contact Info Styling */
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #adb5bd;
+}
+
+.footer-contact i {
+    font-size: 16px;
+    color: #199eeb;
+    width: 20px;
+}
+
+/* Social Icons */
+.social-links .icon-link {
+    color: #adb5bd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-links .icon-link:hover {
+    background-color: #078fdd;
+    border-color: #1095e2;
+    color: #fff;
+}
+
+/* Copyright Bar */
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #adb5bd;
+    font-size: 13px;
+}
+
+.copyright a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.copyright a:hover {
+    color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -627,6 +736,7 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
+  
 }
 
 .about .content ul {
@@ -653,6 +763,27 @@ section,
 .bg_img {
   background-color: #e2ecec;
 }
+
+#about{
+    background-color: #ffffff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+                0 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+.custom-about-bg {
+    background: linear-gradient(to right, #f0f0f0, #e8e8e8); /* Adjust colors to match your theme */
+    padding: 30px;
+  }
+  .custom-hire-btn {
+    background-color: #1e96db; /* Example purple, adjust as needed */
+    border-color: #0897da;
+  }
+  .custom-hire-btn:hover {
+    background-color: #03659e; /* Example purple, adjust as needed */
+    border-color: #044563;
+  }
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -686,6 +817,91 @@ section,
   font-family: var(--heading-font);
   font-size: 14px;
 }
+
+.stats-item {
+    background: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#stats {
+    background-color: #ffffff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+                0 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 40px 0; 
+}
+
+.stats-item {
+  padding: 30px; /* Add space inside the card */
+  background: #fff;
+  height: 100%; /* Ensures all cards in a row are the same height */
+}
+
+/* Shadow for the individual stats cards */
+.stats-card-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Soft initial shadow */
+  transition: all 0.3s ease-in-out; /* Add a smooth transition for the hover */
+}
+
+/* Impressive Hover Effect */
+.stats-card-shadow:hover {
+  transform: translateY(-5px); /* Lift slightly on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Icon Styling */
+.stats-item i {
+  font-size: 48px;
+  margin-bottom: 15px;
+  display: block; /* Stacks icon on its own line */
+  color: #007bff; /* Default blue for icons */
+}
+
+/* * KEY FIX: Counter Number Styling 
+  * Changed '.stats-item span' to '.stats-item .purecounter'
+  * This now *only* targets your counter, not the subtext span.
+*/
+.stats-item .purecounter {
+  display: block; /* Stacks number on its own line */
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+/* Text Styling */
+.stats-item p {
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* * The subtext (<span>Full-Stack...</span>) will now 
+  * correctly inherit its style from the 'p' tag above.
+*/
+
+.stats-item p strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Custom Icon Colors (For Variety) */
+.stats-icon-color-1 { color: #5b79ff; }
+.stats-icon-color-2 { color: #8a2be2; }
+.stats-icon-color-3 { color: #ff5733; }
+
+/* * FIX: Removed the stray comma from the end of this line.
+*/
+.stats-icon-color-4 { color: #73e673; }
+
 
 /*--------------------------------------------------------------
 # Skills Section
@@ -724,64 +940,33 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
-.resume .resume-title {
-  color: var(--heading-color);
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+.custom-gradient-progress {
+    background: linear-gradient(to right, #0d8cd6, #209de6); /* Purple gradient */
+    border-radius: 5px; /* Slightly rounded ends */
+  }
+  .progress {
+    background-color: #e9ecef; /* Lighter background for the progress track */
+    border-radius: 5px;
+  }
+  .skills.section {
+    background-color: #f8f9fa; /* Light grey background for the whole section */
+  }
+  .custom-other-tech-card {
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0); /* Subtle gradient for the card */
+  }
+  .badge.bg-secondary {
+    background-color: #6c757d !important; /* Default Bootstrap secondary, change if you want different */
+  }
 
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
-}
+  #skills{
+    background-color: #ffffff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+                0 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 40px 0;
+  }
 
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 10px;
-}
 
-.resume .resume-item h5 {
-  font-size: 16px;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
-}
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -896,6 +1081,108 @@ section,
   transform: scale(1.1);
 }
 
+
+.custom-shadow-elevate {
+    /* Subtle light grey background for the content area, matching your previous 'light-background' */
+    background-color: #ffffff; 
+    
+    /* Impressive, soft, diffused shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+                0 6px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px; /* Slightly more prominent rounded corners */
+    margin: 40px 0; /* Ensures the shadow is not clipped by elements above/below */
+}
+
+/* Enhancing individual Portfolio Items (Image/Info Container) */
+.portfolio-content {
+    /* This makes the image and info container float nicely */
+    overflow: hidden; 
+    position: relative;
+    border-radius: 8px; /* Rounded corners on the individual card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Very light shadow on cards */
+    
+    /* Smooth transition for the hover effect */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Impressive Hover Effect for Portfolio Items */
+.portfolio-content:hover {
+    transform: translateY(-8px); /* Lifts the card up */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Deepens the shadow on hover */
+}
+
+/* Portfolio Info Overlay Styling (Make sure it's dark and clear) */
+.portfolio-info {
+    position: absolute;
+    inset: 0;
+    padding: 15px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.75); /* Darker overlay */
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.portfolio-content:hover .portfolio-info {
+    opacity: 1; /* Fade in the overlay on hover */
+}
+
+.portfolio-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.portfolio-info p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Style for the Zoom and Link Icons */
+.portfolio-info .preview-link,
+.portfolio-info .details-link {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.portfolio-info .preview-link:hover,
+.portfolio-info .details-link:hover {
+    color: #a366ff; /* Use a color matching your Skills section gradient */
+}
+
+/* You might need to adjust the filter styles based on your site's main theme */
+.portfolio-filters li {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block; /* Crucial: Makes the H2 only as wide as the text */
+    padding-bottom: 10px; /* Space between the text and the line */
+    margin: 0 auto 20px; /* Center the element and add margin below it */
+    font-size: 40px; /* Adjust size as needed */
+    
+}
+
+/* 3. Create the Blue Underline using a Pseudo-element */
+.section-title h2::after {
+    content: ""; /* Must be present for ::after to display */
+    display: block;
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the H2 element */
+    left: 50%; /* Start position at 50% from the left of the H2 */
+    transform: translateX(-50%); /* Crucial: Shifts the line back 50% of its own width to center it */
+    width: 60px; /* Adjust the length of the blue line */
+    height: 4px; /* Adjust the thickness of the blue line */
+    background-color: #007bff; /* Use your preferred blue color */
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -947,6 +1234,64 @@ section,
 .services .service-item .description {
   line-height: 24px;
   font-size: 14px;
+}
+
+.custom-section-shadow {
+    background-color: #f8f9fa; /* Light background for contrast */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+                0 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+/* 2. Individual Service Card Styling */
+.service-card {
+    background-color: white;
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures all cards in the row are the same height */
+}
+
+/* Shadow for the individual cards */
+.custom-card-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft, initial shadow */
+}
+
+/* Hover effect on cards for a more impressive look */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Deeper shadow on hover */
+}
+
+/* 3. Icon Wrapper (The light background circle/square) */
+.service-icon-wrapper {
+    /* Dimensions for the wrapper */
+    width: 80px;
+    height: 80px;
+    /* Styles to replicate the image background */
+    background: #f7f0ff; /* Very light purple/off-white */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Shadow for the icon itself (to make it pop) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. Icon Colors (The purple/blue color of the icon) */
+.service-card i {
+    /* Use a central purple color for all icons */
+    color: #1b9eeb; 
+}
+
+/* Custom colors for variety if you want to use the shades from your image (Optional) */
+.custom-icon-color { color: #8a2be2; } /* Purple */
+.custom-icon-color-2 { color: #5b79ff; } /* Blue/Navy */
+.custom-icon-color-3 { color: #73e673; } /* Green/E-commerce */
+
+.service-card .title {
+    font-weight: 700;
 }
 
 /*--------------------------------------------------------------
@@ -1044,6 +1389,71 @@ section,
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
+}
+
+.custom-section-shadow {
+    background-color: #ffffff; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+                0 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+/* 2. Title Centering and Underline (Re-used from previous fix) */
+.section-title {
+    text-align: center;
+}
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 0 auto 20px;
+    font-size: 32px;
+}
+.section-title h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #007bff; /* Use your preferred blue color */
+}
+
+/* 3. Testimonial Card Styling (The Impressive Look) */
+.testimonial-item {
+    background: #fdfdfd; /* Very light background for the card */
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 250px; /* Ensure a minimum height for better look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Shadow for the individual testimonial cards */
+.custom-testimonial-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft, initial shadow */
+}
+
+/* Impressive Hover Effect for Testimonial Cards */
+.testimonial-item:hover {
+    transform: translateY(-8px); /* Lifts the card up */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Quote Icon Styling */
+.testimonial-item .quote-icon-left,
+.testimonial-item .quote-icon-right {
+    font-size: 26px;
+    color: #a366ff; /* A nice purple color */
+}
+
+.testimonial-img {
+    width: 90px;
+    border-radius: 50%;
+    margin: 15px auto;
+    border: 6px solid #f0e6ff; /* Light purple ring around image */
 }
 
 /*--------------------------------------------------------------
@@ -1146,6 +1556,160 @@ section,
 .contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
+
+
+#contact {
+    padding: 60px 0;
+    background-color: #ffffff; /* Ensure a clean white background */
+}
+
+/* Base styles for the info wrapper, giving it a lifted card feel */
+.info-wrap {
+    padding: 30px;
+    background: #fcfcfc;
+    border-radius: 12px;
+    
+    /* Elegant, subtle floating shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style for individual contact items (Address, Phone, Email) */
+.info-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light inner shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styling */
+.info-item i {
+    font-size: 24px;
+    color: #007bff; /* Primary blue color */
+    width: 44px;
+    height: 44px;
+    background: #eef7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Text styling */
+.info-item h3 {
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.info-item p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Google Map iframe styling */
+.info-wrap iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CONTACT FORM STYLING (The right column) --- */
+.php-email-form {
+    background: #fcfcfc;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.php-email-form label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.php-email-form input,
+.php-email-form textarea {
+    border-radius: 6px;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.php-email-form input:focus,
+.php-email-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+.php-email-form textarea {
+    resize: vertical;
+}
+
+.php-email-form button[type="submit"] {
+    background: #007bff;
+    border: 0;
+    padding: 12px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.php-email-form button[type="submit"]:hover {
+    background: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Styling for loading/error/success messages */
+.php-email-form .loading,
+.php-email-form .error-message,
+.php-email-form .sent-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.php-email-form .loading {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+.php-email-form .error-message {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.php-email-form .sent-message {
+    background: #d4edda;
+    color: #155724;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
@@ -1287,3 +1851,6 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+
